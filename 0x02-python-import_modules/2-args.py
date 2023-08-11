@@ -8,7 +8,7 @@ def main():
 
     print(f"{num_args}", end=' ')
     if num_args == 0:
-        print(".", end='\n\n')
+        print("argument", end='\n\n')
     elif num_args == 1:
         print("argument:", end='\n')
         print(f"{num_args}:", args[0])
