@@ -8,7 +8,7 @@ def main():
 
     sum = add(a, b)
 
-    print("{:d} + {:d} = {.d}".format(a, b, sum))
+    print("{:d} + {:d} = {:d}".format(a, b, sum))
 
 
 if __name__ == '__main__':
