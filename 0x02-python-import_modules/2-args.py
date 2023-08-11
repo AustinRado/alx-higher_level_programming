@@ -3,7 +3,7 @@ import sys
 
 
 def main():
-    args = sys.argv[1:]  # Exclude the script name from the arguments
+    args = sys.argv[1:]
     num_args = len(args)
 
     print(f"{num_args}", end=' ')
