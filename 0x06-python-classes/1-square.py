@@ -1,9 +1,8 @@
 #!/usr/bin/python3
-"""Square class"""
+"""Task"""
 
 
 class Square:
-    """Define square class"""
-    def __init__(self, size):
-        """Initialize class"""
-        self.size = size
+    """This is an empty class"""
+    def __init__(self, size=None):
+        self.__size = size
