@@ -1,18 +1,25 @@
 #!/usr/bin/python3
+
 """
-adds and saves to Python obj to JSON file; loads objects
+Adds all arguments to a python list.
 """
 
+import sys
+from 5-save_to_json_file import save_to_json_file
+from 6-load_from_json_file import load_from_json_file
 
-from sys import argv
-save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
-load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
-filename = "add_item.json"
+def add_item():
 
-try:
-    existing_content = load_from_json_file(filename)
-except FileNotFoundError:
-    existing_content = []
+    try:
+        items = load_from_json_file('add_item.json')
+    except FileNotFoundError:
+        items = []
 
-save_to_json_file(existing_content + argv[1:], filename)
+    items.extend(sys.argv[1:])
+
+    save_to_json_file(items, 'add_item.json')
+
+
+if __name__ == '__main__':
+    add_item()
