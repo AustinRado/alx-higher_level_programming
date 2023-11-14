@@ -1,9 +1,9 @@
 #!/usr/bin/node
 
-const process = require('process');
-const args = process.argv;
-if (args.length < 4) {
-  console.log(0);
-} else {
-  console.log(args.sort().reverse()[1]);
-}
+if (process.argv.length <= 3) {
+    console.log(0);
+  } else {
+    const nums = process.argv.slice(2);
+    nums.sort((a, b) => b - a);
+    console.log(nums[1]);
+  }
