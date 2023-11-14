@@ -1,9 +1,9 @@
 #!/usr/bin/node
 
-const process = require('process');
-const numberConvert = Number(process.argv[2]);
-if (numberConvert ){
-    console.log(`My number: ${numberConvert}`);
+const arg1 = process.argv[2];
+
+if (!isNaN(arg1) && Number.isInteger(parseFloat(arg1))) {
+  console.log(`My number: ${parseInt(arg1)}`);
 } else {
-    console.log('Not a number');
+  console.log('Not a number');
 }
