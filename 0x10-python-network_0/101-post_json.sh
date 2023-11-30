@@ -1,3 +1,3 @@
 #!/bin/bash
 # Displays res status code
-curl -o /dev/null -sw "%{http_code}" "$1"
+curl -s -H "Content-Type: application/json" -d "$(cat "$2")" "$1"
